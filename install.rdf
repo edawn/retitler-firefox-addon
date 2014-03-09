@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{d278e484-172b-4238-a1fe-6412f43df9aa}</em:id>
+    <em:version>0.2.120503</em:version>
+    <em:type>2</em:type>
+
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>27</em:minVersion>
+        <em:maxVersion>27.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+ 
+    <em:name>retitler</em:name>
+    <em:description>Change the title of a page using regular expressions</em:description>
+    <em:creator>Kamil Sartys</em:creator>
+    <em:optionsURL>chrome://retitler/content/options.xul</em:optionsURL>
+
+    <em:localized>
+      <Description>
+        <em:locale>de-DE</em:locale>
+        <em:name>retitler</em:name>
+        <em:description>Kürzt die Beschriftung der Tabs</em:description>
+      </Description>
+    </em:localized>
+    
+  </Description>      
+</RDF>
+
+

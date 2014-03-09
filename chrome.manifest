@@ -1,0 +1,5 @@
+content retitler content/
+overlay chrome://browser/content/browser.xul chrome://retitler/content/overlay.xul
+locale retitler en-US locale/en-US/
+locale retitler de locale/de-DE/
+skin retitler classic/1.0 skin/

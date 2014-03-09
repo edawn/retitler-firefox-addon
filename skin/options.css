@@ -1,0 +1,56 @@
+﻿#helplabel { position: fixed; top: 0px; right: 0px; cursor: pointer; }
+#helplabel > label { cursor: inherit; padding: 2px; }
+
+treechildren::-moz-tree-checkbox(checked){
+    /* css for checked cells */
+    list-style-image: url("chrome://global/skin/checkbox/cbox-check.gif");
+}
+
+treechildren::-moz-tree-cell(error) {
+	background-color: orangered;
+}
+
+/* http://developer.mozilla.org/en/docs/XUL:tree#Script_Examples */
+treechildren::-moz-tree-row(selected) { background-color: #FFFFAA; }
+treechildren::-moz-tree-row(odd) { background-color: #EEEEEE; }
+treechildren::-moz-tree-row(odd, selected) { background-color: #FFFFAA; }
+treechildren::-moz-tree-cell-text(selected) { color: #000000; }
+treechildren::-moz-tree-cell-text(odd, selected) { color: #000000; }
+
+window {
+	height: 200px;
+	width: 500px;
+}
+
+.button-menu-dropmarker {
+	height: 5px;
+}
+
+.myboxbutton {
+	border: solid 1px #000;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.myboxbutton:hover {
+	color: white;
+	background-color: #316AC5;
+	border-color: #316AC5;
+}
+
+.mutates { color: blue; cursor: copy; }
+
+#hgtree>treechildren::-moz-tree-row(isrule) { background-color: #E8FFE0;}
+#hgtree>treechildren::-moz-tree-row(rulebelow) { background-color: #F0FFF8;}
+#hgtree>treechildren::-moz-tree-row(isrule,rulebelow) { background-color: #E0FFF0;}
+#hgtree>treechildren::-moz-tree-row(selected) { background-color: #FFC0CB; }
+
+listitem[odd]:not([selected]) { background-color: #EEEEEE; }
+
+treechildren::-moz-tree-cell(matched) { background-color: #E0FFE0; }
+treechildren::-moz-tree-cell(matched,odd) { background-color: #D0EFD0; }
+
+treechildren::-moz-tree-row(new) { background-color: #C0EEFF; }
+treechildren::-moz-tree-row(new,odd) { background-color: #B0DEEF; }
+
+

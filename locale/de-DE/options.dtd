@@ -1,0 +1,90 @@
+﻿<!ENTITY title "retitler einstellungen">
+<!ENTITY tab.rules.label "Die Regeln">
+<!ENTITY tab.rules.tooltiptext "Die Liste mit den Regeln">
+<!ENTITY tab.options.label "Einstellungen">
+<!ENTITY tab.options.tooltiptext "Zusätzliche Einstellungen">
+<!ENTITY tab.histgen.label "Chronik-analyse">
+<!ENTITY tab.histgen.tooltiptext "Erzeugt Regeln durch eine Analyse der Chronik">
+
+<!ENTITY help "Hilfe">
+<!ENTITY help.tooltiptext "Klicken sie hier für Hilfe">
+
+<!ENTITY isactive.label "Aktiv">
+<!ENTITY url.label "RegEx der die URL erkennt">
+<!ENTITY match.label "Erkennt den Title ...">
+<!ENTITY replace.label "und ersetzt ihn hiermit">
+
+<!ENTITY newrule.label "Neue Regel">
+<!ENTITY newrule.tooltiptext "Fügt eine neue Regel an dieser Stelle ein">
+<!ENTITY edit.label "Bearbeiten">
+<!ENTITY edit.tooltiptext "Bearbeite die Regel in einem eingebauten Editor">
+<!ENTITY copy.label "Kopieren">
+<!ENTITY copy.tooltiptext "Kopiert die ausgewählten Regeln in die Zwischenablage">
+<!ENTITY paste.label "Einfügen">
+<!ENTITY paste.tooltiptext "Fügt die Regeln aus der Zwischenablage hier ein">
+<!ENTITY delete.label "Löschen">
+<!ENTITY delete.tooltiptext "Lösche die gewählten Regeln">
+
+<!ENTITY actionmenu.label "Aktion">
+<!ENTITY up "auf">
+<!ENTITY down "ab">
+<!ENTITY appendnew.label "Neue anhängen">
+<!ENTITY appendnew.tooltiptext "Hängt eine neue Regel an das Ende der Liste">
+<!ENTITY undo.label "Zurück">
+<!ENTITY undo.tooltiptext "Stell einen vorherigen Zustand der Regel-liste wieder her">
+<!ENTITY restore.label "Neu laden">
+<!ENTITY restore.tooltiptext "Liest die Regeln aus den 'Preferences' neu ein">
+<!ENTITY exactmatch.label "Erzeuge exakte Regel">
+<!ENTITY exactmatch.tooltiptext "Erzeugt eine Regel, welche zu dem geöffneten Tab genau passt; dies ist als Ausgangspunkt gedacht, von dem aus man seine eigene Regel gestalten kann">
+
+<!ENTITY generate.label "Erzeugen">
+<!ENTITY generate.tooltiptext "Erzeugt einfach neue einfache Regeln basierend auf den aktuell geöffneten Tabs">
+<!ENTITY cancel.label "Abbrechen">
+<!ENTITY cancel.tooltiptext "Schließe das Fenster ohne die Änderungen zu übernehmen">
+<!ENTITY apply.label "Übernehmen">
+<!ENTITY apply.tooltiptext "Speichert die Änderungen">
+<!ENTITY ok.label "OK">
+<!ENTITY ok.tooltiptext "speichern &amp; schließen">
+
+<!ENTITY xombi.label "Retitler zum 'Extras' Menü hinzufügen">
+<!ENTITY xombi.tooltiptext "Fügt einen Menüpunkt 'Retitler' zu 'Extras' hinzu; wird erst bei einem neuen Browserfenster wirksam">
+<!ENTITY xoi.label "Art des Icons in der Statusleiste">
+<!ENTITY xoi.none.label "keines">
+<!ENTITY xoi.simple.label "einfach">
+<!ENTITY xoi.gory.label "Unzensiert">
+<!ENTITY xoi.scissors.label "Schere">
+<!ENTITY xoi.dot.label "Punkt">
+<!ENTITY xoc.label "Schließen-Schaltflächen auf den Tabs anzeigen:">
+<!ENTITY xoc.op0.label "Auf dem ausgewähltem Tab">
+<!ENTITY xoc.op1.label "Auf jedem Tab">
+<!ENTITY xoc.op2.label "Gar nicht">
+<!ENTITY xow.cb.label "Flexible Tab-Breiten einstellen">
+<!ENTITY xow.min.label "minimale Breite:">
+<!ENTITY xow.max.label "maximale Breite:">
+<!ENTITY xodupgen.label "Erlaube Duplikate">
+<!ENTITY xodupgen.tooltiptext "Gleiche Regeln können mehrfach erzeugt werden">
+
+<!ENTITY hgsure.description "Diese Funktion erzeugt Kürzungsregeln aus den gesammelten Daten der Chronik. Dies wird durch eine Statistische Bewertung der Daten bewerkstelligt. Dadurch sollten die Erebnisse mit hoher Wahrscheinlichkeit Regeln zu den am häufigsten besuchten Seiten enthalten. Dennoch können, aufgrund des mangelhaften Wissens des Programms über die Welt, unpassende Regeln entstehen.
+Deshalb sollte man, nachdem die Regeln erzeugt wurden, diese überprüfen, die gewünschten auswählen und anschließend auf 'Übernehmen' klicken.">
+<!ENTITY hgsure.button.label "Weiter">
+
+<!ENTITY hgrules.header.host "Hostname">
+<!ENTITY hgrules.header.prefsuff "Präfix/Suffix">
+
+<!ENTITY hgoutput.takeover.button.label "Übernehmen">
+<!ENTITY hgoutput.takeover.button.tooltiptext "Fügt die ausgewählten Regeln der Liste der aktiven Regeln hinzu">
+<!ENTITY hgoutput.regenerate.button.label "Start">
+<!ENTITY hgoutput.regenerate.button.tooltiptext "Startet die Analyse der Chronik">
+
+<!ENTITY hgsettingslabel.value "Einstellungen">
+
+<!ENTITY hgsettingsagelimit.label "Altersbegrenzung:">
+<!ENTITY hgsettingsagelimit.tooltiptext "Nur hosts/domains berücksichtigen, bei welchen der der letzte Zugriff nicht mehr als n Tage zurückliegt">
+
+<!ENTITY hgsettingsdistinctitles.label "Unterschiedliche Titel:">
+<!ENTITY hgsettingsdistinctitles.tooltiptext "Mindestzahl unterschiedlicher Titel pro host/domain">
+
+<!ENTITY hgsettingsshowtree.label "Als Baum anzeigen">
+<!ENTITY hgsettingsshowtree.tooltiptext "Zeigt das Ergebnis der Analyse als Baum an">
+
+

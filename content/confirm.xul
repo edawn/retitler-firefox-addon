@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://retitler/locale/confirm.dtd">
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+	title="&title;"
+	onload="init();">
+	<script src="confirm.js"/>
+	<vbox flex="1">
+		<label value="&question.label;"/>
+		<listbox id="listbox" rows="10"/>
+		<hbox>
+			<button label="&cancel.label;" oncommand="close();"/>
+			<button label="&ok.label;" oncommand="accept();"/>
+		</hbox>
+	</vbox>
+	<stringbundleset><stringbundle id="stringbundle" src="chrome://retitler/locale/confirm.properties"/></stringbundleset>
+</window>

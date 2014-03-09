@@ -1,0 +1,4 @@
+﻿<!ENTITY title "Retitler: Confirm Rule Inclusion">
+<!ENTITY question.label "Do you want Retitler to append the following rule(s) to the ruleset?">
+<!ENTITY cancel.label "Cancel">
+<!ENTITY ok.label "OK">

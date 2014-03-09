@@ -1,0 +1,19 @@
+﻿#retitler-status-tooltip > description { margin: 1px; }
+#retitler-status-tooltip > description[numbuh="2"] { text-align: center; }
+#retitler-status-tooltip > description[numbuh="3"] { margin-top: -2px; margin-bottom: -2px; text-align: center; }
+#retitler-status-tooltip > description[numbuh="4"] { text-align: center; }
+
+#retitler-status-tooltip-desc-name { font-weight: bold; padding-bottom: 4px; }
+#retitler-status[icon="0"][icontype="simple"] { list-style-image: url("chrome://retitler/skin/logo-0.png"); }
+#retitler-status[icon="1"][icontype="simple"] { list-style-image: url("chrome://retitler/skin/logo-1.png"); }
+#retitler-status[icon="2"][icontype="simple"] { list-style-image: url("chrome://retitler/skin/logo-2.png"); }
+#retitler-status[icon="0"][icontype="gory"] { list-style-image: url("chrome://retitler/skin/logo-blood-0.png"); }
+#retitler-status[icon="1"][icontype="gory"] { list-style-image: url("chrome://retitler/skin/logo-blood-1.png"); }
+#retitler-status[icon="2"][icontype="gory"] { list-style-image: url("chrome://retitler/skin/logo-blood-2.png"); }
+#retitler-status[icon="0"][icontype="scissors"] { list-style-image: url("chrome://retitler/skin/logo-scissors-0.png"); }
+#retitler-status[icon="1"][icontype="scissors"] { list-style-image: url("chrome://retitler/skin/logo-scissors-1.png"); }
+#retitler-status[icon="2"][icontype="scissors"] { list-style-image: url("chrome://retitler/skin/logo-scissors-2.png"); }
+#retitler-status[icon="0"][icontype="dot"] { list-style-image: url("chrome://retitler/skin/logo-dot-0.png"); }
+#retitler-status[icon="1"][icontype="dot"] { list-style-image: url("chrome://retitler/skin/logo-dot-1.png"); }
+#retitler-status[icon="2"][icontype="dot"] { list-style-image: url("chrome://retitler/skin/logo-dot-2.png"); }
+

@@ -1,0 +1,90 @@
+﻿<!ENTITY title "retitler preferences">
+<!ENTITY tab.rules.label "Ruleset">
+<!ENTITY tab.rules.tooltiptext "Ruleset">
+<!ENTITY tab.options.label "Settings">
+<!ENTITY tab.options.tooltiptext "Additonal settings">
+<!ENTITY tab.histgen.label "History Analysis">
+<!ENTITY tab.histgen.tooltiptext "Derive rules from browsing history">
+
+<!ENTITY help "help">
+<!ENTITY help.tooltiptext "click here to get help">
+
+<!ENTITY isactive.label "Active">
+<!ENTITY url.label "The URL matching ...">
+<!ENTITY match.label "and Title matching ...">
+<!ENTITY replace.label "replace Title with ...">
+
+<!ENTITY newrule.label "new rule">
+<!ENTITY newrule.tooltiptext "inserts new rule here">
+<!ENTITY edit.label "edit">
+<!ENTITY edit.tooltiptext "edit the rule in a fancy editing window">
+<!ENTITY copy.label "copy">
+<!ENTITY copy.tooltiptext "copies selected rules to the clipboard">
+<!ENTITY paste.label "paste">
+<!ENTITY paste.tooltiptext "insert rules from clipboard here">
+<!ENTITY delete.label "delete">
+<!ENTITY delete.tooltiptext "delete selected rules">
+
+<!ENTITY actionmenu.label "Action">
+<!ENTITY up "up">
+<!ENTITY down "down">
+<!ENTITY appendnew.label "append new">
+<!ENTITY appendnew.tooltiptext "append new rule">
+<!ENTITY undo.label "undo">
+<!ENTITY undo.tooltiptext "revert to some previous state of the ruleset">
+<!ENTITY restore.label "restore">
+<!ENTITY restore.tooltiptext "restore saved rules from the preferences">
+<!ENTITY exactmatch.label "create exact">
+<!ENTITY exactmatch.tooltiptext "creates a rule that exactly matches the currently selected tab; this is intended to serve as a template for an own rule">
+
+<!ENTITY generate.label "Generate">
+<!ENTITY generate.tooltiptext "Generate and append simple rules based on currently open tabs' titles">
+<!ENTITY cancel.label "Cancel">
+<!ENTITY cancel.tooltiptext "close without saving changes">
+<!ENTITY apply.label "Apply">
+<!ENTITY apply.tooltiptext "save changes">
+<!ENTITY ok.label "OK">
+<!ENTITY ok.tooltiptext "save &amp; close">
+
+<!ENTITY xombi.label "Add Retitler to the Tools menu">
+<!ENTITY xombi.tooltiptext "Adds a Menuitem 'Retitler' to the Tools menu; changes will take effect only on newly opened windows">
+<!ENTITY xoi.label "type of statusbar icon">
+<!ENTITY xoi.none.label "none">
+<!ENTITY xoi.simple.label "simple">
+<!ENTITY xoi.gory.label "gory">
+<!ENTITY xoi.scissors.label "scissors">
+<!ENTITY xoi.dot.label "dot">
+<!ENTITY xoc.label "Display of tab close buttons:">
+<!ENTITY xoc.op0.label "on active tab">
+<!ENTITY xoc.op1.label "on every tab">
+<!ENTITY xoc.op2.label "none">
+<!ENTITY xow.cb.label "Use more flexible tab-width">
+<!ENTITY xow.min.label "minimum width:">
+<!ENTITY xow.max.label "maximum width:">
+<!ENTITY xodupgen.label "Allow duplicates">
+<!ENTITY xodupgen.tooltiptext "Duplicate Rules may be (re)generated">
+
+
+<!ENTITY hgsure.description "This feature will try to derive the rules for title modification through a statistical analysis of your browsing history. The results may be correct. To start, click on 'Start'. Depending on the size of your history, the speed of your computer and the settings, this may take a few moments. Please be patient. After the rules have appeared, select the appropriate ones and click on 'Take over'.">
+<!ENTITY hgsure.button.label "Next">
+
+<!ENTITY hgrules.header.host "Hostname">
+<!ENTITY hgrules.header.prefsuff "Prefix/Suffix">
+
+<!ENTITY hgoutput.takeover.button.label "Take over">
+<!ENTITY hgoutput.takeover.button.tooltiptext "Append the selected rules to the Ruleset">
+<!ENTITY hgoutput.regenerate.button.label "Start">
+<!ENTITY hgoutput.regenerate.button.tooltiptext "Starts the analysis">
+
+<!ENTITY hgsettingslabel.value "Settings">
+
+<!ENTITY hgsettingsagelimit.label "Age Limit:">
+<!ENTITY hgsettingsagelimit.tooltiptext "consider only hosts/domains with the last visit no more than n days ago">
+
+<!ENTITY hgsettingsdistinctitles.label "Distinct titles:">
+<!ENTITY hgsettingsdistinctitles.tooltiptext "Minimum number of distinct titles for a host/domain; filters hosts with only a few visits">
+
+<!ENTITY hgsettingsshowtree.label "Show tree">
+<!ENTITY hgsettingsshowtree.tooltiptext "Shows a fancy and more informative tree; this is rather intended for debugging purposes">
+
+

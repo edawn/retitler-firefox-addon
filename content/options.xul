@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/"  type="text/css"?>
+<?xml-stylesheet href="chrome://retitler/skin/options.css"  type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://retitler/locale/options.dtd">
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+	title="&title;">
+	<script src="lib.js"/>
+	<script src="options.tablistener.js"/>
+	<script src="options.treeview.js"/>
+	<script src="options.js"/>
+	<script src="options.histgen.js"/>
+	<script src="options.histgentree.js"/>
+
+	<hbox id="helplabel" onclick="help();" tooltiptext="&help.tooltiptext;"><label value="&help;"/></hbox>
+<box flex="1">
+<tabbox id="tabbox" flex="1">
+<tabs>
+	<tab label="&tab.rules.label;" tooltiptext="&tab.rules.tooltiptext;"/>
+	<tab label="&tab.options.label;" tooltiptext="&tab.options.tooltiptext;"/>
+	<tab label="&tab.histgen.label;" tooltiptext="&tab.histgen.tooltiptext;"/>
+</tabs>
+<tabpanels flex="1">
+<tabpanel flex="1"> <!-- rules -->
+<vbox flex="1">	
+<scrollbox id="scrollbox" flex="1"> <!-- the list-like tree -->
+	<tree id="ruletree" flex="1" editable="true" hidecolumnpicker="true" context="treecm"  onkeyup="if (event.keyCode == 46 &amp;&amp; event.originalTarget.tagName != 'html:input') delRules(event); //del (un)pressed">
+	<treecols>
+		<treecol id="isActive" label="&isactive.label;" type="checkbox" editable="true"/>
+		<splitter class="tree-splitter"/>
+		<treecol id="url" label="&url.label;" flex="1"/>
+		<splitter class="tree-splitter"/>
+		<treecol id="match" label="&match.label;" flex="1"/>
+		<splitter class="tree-splitter"/>
+		<treecol id="replace" label="&replace.label;" flex="1"/>
+	</treecols>
+	<treechildren id="ruletreechildren" onmousedown="treeMouseDownTest(event);" onmousemove="treeMouseMoveTest(event);" onmouseup="treeMouseUpTest(event);"/>
+
+	<menupopup id="treecm" onpopupshowing="treecmShowingHandler(event);">
+		<menuitem label="&newrule.label;" tooltiptext="&newrule.tooltiptext;" oncommand="treecmNewRule();"/>
+		<menuitem label="&edit.label;" tooltiptext="&edit.tooltiptext;" oncommand="window.open('chrome://retitler/content/ruled.xul', 'rule-editor', 'chrome,centerscreen');"/>
+		<menuitem label="&copy.label;" tooltiptext="&copy.tooltiptext;" oncommand="treecmCopy();"/>
+		<menuitem label="&paste.label;" tooltiptext="&paste.tooltiptext;" oncommand="treecmPaste();"/>
+		<menuitem label="&delete.label;" tooltiptext="&delete.tooltiptext;" oncommand="delRules();"/> 
+	</menupopup>
+    </tree>
+</scrollbox>
+<hbox>	<!-- the buttons below -->
+	<button id="actionButton" label="&actionmenu.label;" type="menu">
+		<menupopup id="actionPopup">
+			<hbox flex="1" pack="center">
+				<box class="myboxbutton" onclick="moveSelected(MVUP);">
+					<label value="&up;"/>
+				</box>
+				<box class="myboxbutton" onclick="moveSelected(MVDN);">
+					<label value="&down;"/>
+				</box>
+			</hbox>
+			<menuitem label="&appendnew.label;" tooltiptext="&appendnew.tooltiptext;" oncommand="appendRule();"/>
+			<menuitem label="&delete.label;" tooltiptext="&delete.tooltiptext;" oncommand="delRules();"/>
+			<menuitem label="&undo.label;" tooltiptext="&undo.tooltiptext;" oncommand="undoRules();" />
+			<menuitem label="&restore.label;" tooltiptext="&restore.tooltiptext;" oncommand="restoreRules();"/>
+			<menuitem label="&exactmatch.label;" tooltiptext="&exactmatch.tooltiptext;" oncommand="appendExactRule();"/>
+		</menupopup>
+	</button>
+	<button label="&generate.label;" tooltiptext="&generate.tooltiptext;" oncommand="generate();"/>
+	<hbox flex="1" pack="end">
+		<button label="&cancel.label;" tooltiptext="&cancel.tooltiptext;" oncommand="close();"/>
+		<button label="&apply.label;" tooltiptext="&apply.tooltiptext;" oncommand="apply();"/>
+		<button label="&ok.label;" tooltiptext="&ok.tooltiptext;" oncommand="okay();"/>
+	</hbox>
+</hbox>
+</vbox>
+</tabpanel>
+<tabpanel> <!-- extended options -->
+	<vbox>	
+		<hbox><checkbox id="xombi" label="&xombi.label;" tooltiptext="&xombi.tooltiptext;"/></hbox>
+		<hbox align="center">
+			<label value="&xoi.label;"/>
+			<menulist>
+				<menupopup id="exoptsicon">
+					<menuitem label="&xoi.none.label;" value="none"/>
+					<menuitem label="&xoi.simple.label;" value="simple"/>
+					<menuitem label="&xoi.gory.label;" value="gory"/>
+					<menuitem label="&xoi.scissors.label;" value="scissors"/>
+					<menuitem label="&xoi.dot.label;" value="dot"/>
+				</menupopup>
+			</menulist>
+		</hbox>
+		<hbox>
+			<groupbox>
+				<caption>
+					<label value="&xoc.label;"/>
+				</caption>
+				<radiogroup id="exoptsclose" oncommand="setCloseButtons(event);">
+					<!-- consult http://kb.mozillazine.org/Browser.tabs.closeButtons about the values -->
+					<radio label="&xoc.op0.label;" value="0"/>
+					<radio label="&xoc.op1.label;" value="1"/>
+					<radio label="&xoc.op2.label;" value="2"/>
+				</radiogroup>
+			</groupbox>
+		</hbox>
+		<groupbox>
+			<caption>
+				<checkbox id="xowcb" label="&xow.cb.label;" oncommand="setTabWidth(event);"/>
+			</caption>
+			<hbox>
+				<label value="&xow.min.label;"/><textbox id="xowmin" type="number" min="20" max="999" maxlength="3" size="3" onchange="setMinTabWidth(event);"/>
+				<label value="&xow.max.label;"/><textbox id="xowmax" type="number" min="20" max="999" maxlength="3" size="3" onchange="setMaxTabWidth(event);"/>
+			</hbox>
+		</groupbox>
+		
+		<hbox><checkbox id="xodupgen" label="&xodupgen.label;" tooltiptext="&xodupgen.tooltiptext;"/></hbox>
+	</vbox>
+</tabpanel>
+<tabpanel flex="1"> <!-- 'history generator' -->
+	<vbox id="hgsure">
+		<hbox><description width="400">&hgsure.description;</description></hbox>
+		<hbox><button label="&hgsure.button.label;" oncommand="$('hgsure').hidden=true; $('hgoutput').hidden=false;"/></hbox>
+	</vbox>
+	<hbox flex="1">
+	<vbox id="hgoutput" hidden="true" flex="1">
+		<listbox id="hgrules" seltype="multiple" rows="5" flex="1">
+			<listhead>
+				<listheader label="&hgrules.header.host;"/>
+				<listheader label="&hgrules.header.prefsuff;"/>
+			</listhead>
+			<listcols>
+				<listcol/>
+				<listcol flex="1"/>
+			</listcols>
+		</listbox>
+		<tree id="hgtree" width="400" height="600" flex="1" hidden="true" seltype="single">
+			<treecols>
+				<treecol id="title" primary="true" label="title prefix/suffix" flex="1"/>
+				<splitter class="tree-splitter"/>
+				<treecol id="url" label="url" flex="1"/>
+			</treecols>
+			<treechildren id="hgtreechildren"/>
+		</tree>
+		<hbox>
+			<button label="&hgoutput.takeover.button.label;" 
+				tooltiptext="&hgoutput.takeover.button.tooltiptext;" 
+				oncommand="hgSelected2Ruleset($('hgrules'));"/>
+			<button label="&hgoutput.regenerate.button.label;" 
+				tooltiptext="&hgoutput.regenerate.button.tooltiptext;" 
+				oncommand="hgFill($('hgrules')); hgTree($('hgtree'));"/>
+		</hbox>
+
+		<hbox>
+			<label id="hgsettingslabel"
+				value="&hgsettingslabel.value;" 
+				onclick="$('hgsettingslabel').hidden^=true; $('hgsettingsgroup').hidden^=true;" 
+				class="mutates" hidden="false"/>
+			<hbox flex="1"/>
+		</hbox>
+
+		<groupbox id="hgsettingsgroup" orient="horizontal" align="center" hidden="true">
+			<caption onclick="$('hgsettingslabel').hidden^=true; $('hgsettingsgroup').hidden^=true;" class="mutates">
+				<label value="&hgsettingslabel.value;" class="mutates"/>
+			</caption>
+
+			<label value="&hgsettingsagelimit.label;" tooltiptext="&hgsettingsagelimit.tooltiptext;"/>
+			<textbox id="hgsettingsagelimit"
+				min="1" max="999" size="3" value="30" type="number" 
+				onchange="hgSettings.maxAge=event.target.value;"/>
+			
+			<label value="&hgsettingsdistinctitles.label;" tooltiptext="&hgsettingsdistinctitles.tooltiptext;"/>
+			<textbox id="hgsettingsdistinctitles" 
+				min="5" max="999" size="3" value="5" type="number" 
+				onchange="hgSettings.minDistinctTitles=event.target.value;"/>
+			
+			<checkbox label="&hgsettingsshowtree.label;" 
+				tooltiptext="&hgsettingsshowtree.tooltiptext;"
+				checked="false" 
+				oncommand="$('hgtree').hidden^=true; !$('hgtree').hidden ? hgTree($('hgtree')):null;"/>
+		</groupbox>
+
+	</vbox>
+	</hbox>
+</tabpanel>
+</tabpanels>
+</tabbox>
+</box>
+</window>
+

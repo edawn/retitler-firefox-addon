@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/"  type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://retitler/locale/ruled.dtd">
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+	title="hallo">
+    <script src="ruled.js"/>
+    <hbox><label value="activated"/><checkbox id="isActive"/></hbox>
+    <hbox><label value="url matches"/><textbox id="url"/></hbox>
+    <hbox><label value="title matches"/><textbox id="match"/></hbox>
+    <hbox><label value="replace with"/><textbox id="replace"/></hbox>
+    <hbox><button label="ok"/><button label="cancel"/></hbox>
+</window>

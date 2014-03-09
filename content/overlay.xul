@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://retitler/skin/overlay.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://retitler/locale/overlay.dtd">
+<overlay id="retitler-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script src="overlay.js"/>
+	<script src="overlay.firstrun.js"/>
+	<script src="overlay.tabs.js"/>
+	<script src="overlay.statusbar.js"/>
+
+	<menupopup id="menu_ToolsPopup">
+		<menuitem id="retitler-tools-menu-item" oncommand="window.open('chrome://retitler/content/options.xul', 'retitler-options', 'chrome,centerscreen,alwaysRaised,resizable');" label="Retitler"/>
+	</menupopup>
+
+	<statusbar id="status-bar">
+		<statusbarpanel id="retitler-status" label="Retitler" tooltip="retitler-status-tooltip" 
+			onclick="if (event.button == 0) retitler.generate();"
+			oncontextmenu="window.open('chrome://retitler/content/options.xul', 'retitler-options', 'chrome,centerscreen,alwaysRaised,resizable');"
+			class="statusbarpanel-iconic">
+		</statusbarpanel>
+		<tooltip id="retitler-status-tooltip" noautohide="true">
+			<description id="retitler-status-tooltip-desc-name"/>
+			<description>&statusbarpanel.tooltiptext.leftclick;</description>
+			<description>&statusbarpanel.tooltiptext.rightclick;</description>
+		</tooltip>
+		<stringbundleset><stringbundle id="retitler-status-tooltip-stringbundle" src="chrome://retitler/locale/overlay.properties"/></stringbundleset>
+	</statusbar>
+</overlay>

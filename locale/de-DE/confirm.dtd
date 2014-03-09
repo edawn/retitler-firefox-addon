@@ -1,0 +1,4 @@
+﻿<!ENTITY title "Retitler: bestätigen sie das Hinzufügen der Regeln">
+<!ENTITY question.label "Möchten sie, dass Retitler die folgenden Regeln in den Satz der aktiven Regeln aufnimmt?">
+<!ENTITY cancel.label "Abbrechen">
+<!ENTITY ok.label "OK">
